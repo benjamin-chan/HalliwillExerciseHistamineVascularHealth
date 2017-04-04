@@ -1,8 +1,8 @@
-# TITLE
+# Halliwill: Exercise, Histamine Receptors, and Vascular Health in Aging
 
 Attribute | Value
 :---|:---
-Principal investigator | Investigator 1, invest1@ohsu.edu, 503-494-nnnn
+Principal investigator | John Halliwill, halliwil@cas.uoregon.edu
 Main contact | Investigator 2, invest2@ohsu.edu, 503-494-nnnn
 Statistician | Benjamin Chan, chanb@ohsu.edu, 503-494-5491
 eIRB # | IRB00000000
