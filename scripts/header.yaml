@@ -1,0 +1,9 @@
+---
+title: "Halliwill: Exercise, Histamine Receptors, and Vascular Health in Aging"
+date: "`r Sys.time()`"
+author: Benjamin Chan (chanb@ohsu.edu)
+output:
+  html_document:
+    toc: true
+    theme: simplex
+---

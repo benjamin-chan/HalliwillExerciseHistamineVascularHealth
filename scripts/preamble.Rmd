@@ -1,0 +1,39 @@
+# Preamble
+
+Set working directory.
+
+```{r}
+setwd("~/Projects/HalliwillExerciseHistamineVascularHealth/scripts")
+```
+
+Load libraries.
+
+```{r}
+library(magrittr)
+library(dplyr)
+library(ggplot2)
+library(svglite)
+library(knitr)
+library(pwr)
+# library(TrialSize)
+```
+
+Reproducibility steps.
+
+```{r}
+sessionInfo() %>% print(locale = FALSE)
+set.seed(as.integer(as.Date("2017-04-10")))
+```
+
+Source user-defined functions.
+
+```{r, eval = TRUE}
+sapply(list.files("../lib", full.names = TRUE), source)
+```
+
+
+## References
+
+```{r}
+citation()
+```
