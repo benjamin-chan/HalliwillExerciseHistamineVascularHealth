@@ -1,0 +1,146 @@
+# Power and sample size
+
+Use research plan described in [`RESEARCH_PLAN_03.23.2017.docx`](background/RESEARCH_PLAN_03.23.2017.docx).
+
+```{r}
+alpha <- 0.05
+beta <- 1 - 0.90
+```
+
+
+## Aim 1
+
+Identify the exercise-related signal that causes histamine release in skeletal muscle
+
+* Blocking on subject, matched pairs
+* One-factor design
+  * Factor: heat or unheated (Aim 1a)
+  * Factor: rest or exercise (Aim 1b)
+* Aim 1a and 1b use two separate cohorts of subjects
+* Randomize which leg receives heat (Aim 1a) and performs exercise (Aim 1b)
+* Assume the effect of heat (1a) and exercise (1b) are highly correlated; 
+  i.e., only need to run power/sample-size calculations for 1 sub-aim
+* Power on the pre-to-during experimental condition comparison
+  * Not necessary to power on the pre-to-post comparison
+
+Use the *Effect size* column in the *Sample sizes* tab of the Excel workbook file
+[`Models and Sample size estimates 3.17.2017.xlsx`](background/Models\sand\sSample\ssize\sestimates\s3.17.2017.xlsx).
+
+```{r}
+effectSizes <- c(1.44, 1.74)
+power <- pwr.t.test(d = min(effectSizes),
+                    sig.level = alpha, power = 1 - beta, 
+                    type = "one.sample")
+message(sprintf("Estimated sample size for Aim 1: %d",
+                ceiling(power[["n"]])))
+L <- list("aim1" = power)
+```
+
+
+# Aim 2
+
+Determine the histaminergic component of endothelial and vascular smooth muscle responses to exercise
+
+* Two-factor design
+  * Factor A: rest or exercise
+  * Factor B: no blockade, *in vitro* blockade, or *in vivo* blockade
+* Blocking on subject
+* Randomize order of factors
+* For Aim 2, I am going to place two microdialysis fibers in each subject,
+  and randomize one to control (no drug) and the other to blockade. Then I
+  will collect samples before and during exercise. All this will be done in
+  each subject. When we take the dialysate to cell culture, we can add drugs
+  to half the control samples to create our in vitro blockade group. This
+  means that every condition is generated in every subject. We can randomize
+  control, in vivo blockade, and in vitro blockade, but we can't randomize
+  resting (pre-exercise) versus exercise. I hope that makes sense.
+
+```
+[Ben] This sounds like there will be imbalance in the blockade factor 
+(25:25:50 split between control : in vitro blockade : in vivo blockade). 
+Is this the intent? Am I missing something?
+Step 1: In vivo blockade or not in vivo blockade (50:50 split)
+Step 2: Among not in vivo blockade, split into control or in vitro blockade (50:50 split of the 50%)
+FOR AIM 2, THE PROCESS OF STEPS YOU DESCRIBE IS CORRECT. 
+WE WILL JUST END UP WITH LEFTOVER DIALYSATE FROM THE IN VIVO BLOCKADE PROBES.  
+```
+
+```{r}
+effectSizes <- 1.18
+
+```
+
+
+# Aim 3
+
+Determine the impact of histamine on short-term inflammatory responses to exercise
+
+* Randomized crossover design
+* One-factor design
+  * Factor A: control or blockade
+  * Include 1-week washout period
+* Blocking on subject
+* Randomize order of factor
+* Repeated measurements at t = 0, 3, 6, 12, 24, 48h but only interested in *peak* values
+  * Reduce analysis to paired sample test, pre vs peak change
+
+Use the *Effect size* column in the *Sample sizes* tab of the Excel workbook file
+[`Models and Sample size estimates 3.17.2017.xlsx`](background/Models\sand\sSample\ssize\sestimates\s3.17.2017.xlsx).
+
+```{r}
+effectSizes <- c(1.82, 2.19, 0.98)
+power <- pwr.t.test(d = min(effectSizes),
+                    sig.level = alpha, power = 1 - beta, 
+                    type = "one.sample")
+message(sprintf("Estimated sample size for Aim 3: %d",
+                ceiling(power[["n"]])))
+L <- c(L, list("aim3" = power))
+```
+
+
+# Aim 4
+
+Determine the histamine component of longer-term adaptations to exercise training
+
+* Randomized controlled trial
+* Randomize control or blockade
+* One consideration here is how to handle subject dropout and resulting
+  missing data. We would want to know if more/fewer blockade subjects drop out
+  compared to control (could be a problem), so that is something like
+  "intention to treat" (but i may not use that phrase correctly). On the other
+  hand, we want to know (more important) whether blockade has an effect on
+  adaptation in those who do complete the training (which is different than
+  intention to treat. if they don't complete the training, then they don't
+  help us answer this question). I have seen this concept lead to confusion
+  during grant reviews, so we want to make sure we are clear how we are
+  thinking about this and handling it in the stats.
+* Analyze as *per protocol* analysis
+  * Only subjects who completed the protocol are analyzed
+  * This can be justified but needs to be stated up front
+  * Ref: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210)
+
+```{r}
+dropout <- 0.20
+effectSizes <- c(2.55, 1.54, 1.50)
+power <- pwr.t.test(d = min(effectSizes),
+                    sig.level = alpha, power = 1 - beta, 
+                    type = "two.sample")
+message(sprintf("Estimated sample size for Aim 4: %d in each group",
+                ceiling(power[["n"]] * (1 + dropout))))
+L <- c(L, list("aim4" = power))
+```
+
+
+# Summary
+
+```{r}
+power <- 
+  data.frame(aim = as.integer(),
+             design = as.character(),
+             n = as.integer()) %>% 
+  rbind(data.frame(aim = 1, design = "One-sample t-test", n = ceiling(L[["aim1"]][["n"]])),
+        # data.frame(aim = 2, design = "One-sample t-test", n = ceiling(L[["aim2"]][["n"]])),
+        data.frame(aim = 3, design = "One-sample t-test", n = ceiling(L[["aim3"]][["n"]])),
+        data.frame(aim = 4, design = "Two-sample t-test", n = ceiling(L[["aim4"]][["n"]] * (1 + dropout)) * 2))
+power %>% kable
+```
