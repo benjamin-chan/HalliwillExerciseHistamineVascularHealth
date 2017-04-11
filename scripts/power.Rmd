@@ -42,28 +42,56 @@ L <- list("aim1" = power)
 Determine the histaminergic component of endothelial and vascular smooth muscle responses to exercise
 
 * Two-factor design
-  * Factor A: no blockade, *in vitro* blockade, or *in vivo* blockade
-  * Factor B: rest or exercise (nuisance)
+  * Factor A: rest or exercise (nuisance)
+  * Factor B: no blockade, *in vitro* blockade, or *in vivo* blockade
 * Blocking on subject
-* Randomize order of factors
-* For Aim 2, I am going to place two microdialysis fibers in each subject,
-  and randomize one to control (no drug) and the other to blockade. Then I
-  will collect samples before and during exercise. All this will be done in
-  each subject. When we take the dialysate to cell culture, we can add drugs
-  to half the control samples to create our in vitro blockade group. This
-  means that every condition is generated in every subject. We can randomize
-  control, in vivo blockade, and in vitro blockade, but we can't randomize
-  resting (pre-exercise) versus exercise. I hope that makes sense.
+  * Each subject has measurements for each $A \times B$ combination
+* Randomize blockade factor
 
-```
-[Ben] This sounds like there will be imbalance in the blockade factor 
-(25:25:50 split between control : in vitro blockade : in vivo blockade). 
-Is this the intent? Am I missing something?
-Step 1: In vivo blockade or not in vivo blockade (50:50 split)
-Step 2: Among not in vivo blockade, split into control or in vitro blockade (50:50 split of the 50%)
-FOR AIM 2, THE PROCESS OF STEPS YOU DESCRIBE IS CORRECT. 
-WE WILL JUST END UP WITH LEFTOVER DIALYSATE FROM THE IN VIVO BLOCKADE PROBES.  
-```
+---
+
+> From: halliwil@cas.uoregon.edu [mailto:halliwil@cas.uoregon.edu] On Behalf Of John Halliwill, PhD  
+> Sent: Tuesday, April 04, 2017 12:06 PM  
+> To: Benjamin Chan <chanb@ohsu.edu>  
+> Subject: Re: Statistical consultant for R01  
+> 
+> OK, changing out of all caps mode... for Aim 2, I am going to place two
+> microdialysis fibers in each subject, and randomize one to control (no drug)
+> and the other to blockade. Then I will collect samples before and during
+> exercise. All this will be done in each subject. When we take the dialysate to
+> cell culture, we can add drugs to half the control samples to create our in
+> vitro blockade group. This means that every condition is generated in every
+> subject. We can randomize control, in vivo blockade, and in vitro blockade,
+> but we can't randomize resting (pre-exercise) versus exercise. I hope that
+> makes sense.
+
+---
+
+> From: halliwil@cas.uoregon.edu [mailto:halliwil@cas.uoregon.edu] On Behalf Of John Halliwill, PhD  
+> Sent: Tuesday, April 04, 2017 2:47 PM  
+> To: Benjamin Chan <chanb@ohsu.edu>  
+> Subject: Re: Statistical consultant for R01  
+> 
+> [Ben] This sounds like there will be imbalance in the blockade factor
+> (25:25:50 split between control : in vitro blockade : in vivo blockade). Is
+> this the intent? Am I missing something?
+> 
+> Step 1: In vivo blockade or not in vivo blockade (50:50 split)  
+> 
+> Step 2: Among not in vivo blockade, split into control or in vitro blockade (50:50 split of the 50%)  
+> 
+> FOR AIM 2, THE PROCESS OF STEPS YOU DESCRIBE IS CORRECT. WE WILL JUST END UP WITH LEFTOVER DIALYSATE FROM THE IN VIVO BLOCKADE PROBES.  
+
+---
+
+> From: halliwil@cas.uoregon.edu [mailto:halliwil@cas.uoregon.edu] On Behalf Of John Halliwill, PhD  
+> Sent: Tuesday, April 11, 2017 3:12 PM  
+> To: Benjamin Chan <chanb@ohsu.edu>  
+> Subject: Re: Statistical consultant for R01  
+> 
+> We are interested in the exercise conditions across the three blockade states. 
+> Since we will have the data, we will look at the rest condition across the three blockade states as an experimental control - 
+> there shouldn't be any effect of blockade on resting data. 
 
 ```{r}
 effectSizes <- 1.18
