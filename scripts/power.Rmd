@@ -136,12 +136,8 @@ L <- c(L, list("aim4" = power))
 
 ```{r}
 power <- 
-  data.frame(aim = as.integer(),
-             design = as.character(),
-             effectSize = as.numeric(),
-             n = as.integer(),
-             notes = as.character()) %>% 
-  rbind(data.frame(aim = 1, design = "One-sample t-test", 
+  rbind(data.frame(aim = 1, 
+                   design = "One-sample matched pairs", model = "One-sample t-test", 
                    effectSize = L[["aim1"]][["d"]],
                    n = ceiling(L[["aim1"]][["n"]]), 
                    notes = NA_character_),
@@ -149,13 +145,18 @@ power <-
         #            effectSize = L[["aim2"]][["d"]],
         #            n = ceiling(L[["aim2"]][["n"]]), 
         #            notes = NA_character_),
-        data.frame(aim = 3, design = "One-sample t-test", 
+        data.frame(aim = 3, 
+                   design = "One-sample randomized crossover", model = "One-sample t-test", 
                    effectSize = L[["aim3"]][["d"]],
                    n = ceiling(L[["aim3"]][["n"]]), 
                    notes = NA_character_),
-        data.frame(aim = 4, design = "Two-sample t-test", 
+        data.frame(aim = 4, 
+                   design = "Two-sample RCT", model = "Two-sample t-test", 
                    effectSize = L[["aim4"]][["d"]],
                    n = ceiling(L[["aim4"]][["n"]] * (1 + dropout)) * 2,
-                   notes = sprintf("Per protocol analysis\nSample size assumes %.00f%% dropout", dropout * 100)))
+                   notes = sprintf("Per protocol analysis\nSample size assumes %.00f%% dropout", dropout * 100))) %>% 
+  mutate(alpha = alpha, 
+         power = sprintf("%.00f%%", (1 - beta) * 100), 
+         hypothesis = "Two-sided")
 power %>% kable
 ```
