@@ -37,4 +37,6 @@ sapply(list.files("../lib", full.names = TRUE), source)
 
 ```{r}
 citation()
+citation("pwr")
+citation("simr")
 ```
