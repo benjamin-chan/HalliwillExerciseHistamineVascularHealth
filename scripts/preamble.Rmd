@@ -15,6 +15,7 @@ library(ggplot2)
 library(svglite)
 library(knitr)
 library(pwr)
+library(simr)
 # library(TrialSize)
 ```
 
