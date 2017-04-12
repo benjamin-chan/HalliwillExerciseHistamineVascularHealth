@@ -26,5 +26,5 @@ sink()
 sink("session.log")
 list(completionDateTime = Sys.time(),
      executionTime = Sys.time() - Sys.time0,
-     sessionInfo = sessionInfo(locale = FALSE))
+     sessionInfo = sessionInfo())
 sink()
