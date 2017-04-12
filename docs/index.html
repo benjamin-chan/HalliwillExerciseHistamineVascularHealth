@@ -1,0 +1,1351 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style>
+<link href='http://bootswatch.com/readable/bootstrap.css' rel='stylesheet' type='text/css'><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>index</title></head><body><article class="markdown-body"><hr>
+<h2>
+<a id="user-content-title-halliwill-exercise-histamine-receptors-and-vascular-health-in-agingdate-2017-04-12-085946author-benjamin-chan-chanbohsueduoutputhtml_documenttoc-truetheme-simplex" class="anchor" href="#title-halliwill-exercise-histamine-receptors-and-vascular-health-in-agingdate-2017-04-12-085946author-benjamin-chan-chanbohsueduoutputhtml_documenttoc-truetheme-simplex" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>title: "Halliwill: Exercise, Histamine Receptors, and Vascular Health in Aging"
+date: "2017-04-12 08:59:46"
+author: Benjamin Chan (<a href="mailto:chanb@ohsu.edu">chanb@ohsu.edu</a>)
+output:
+html_document:
+toc: true
+theme: simplex</h2>
+<h1>
+<a id="user-content-preamble" class="anchor" href="#preamble" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preamble</h1>
+<p>Set working directory.</p>
+<div class="highlight highlight-source-r"><pre>setwd(<span class="pl-s"><span class="pl-pds">"</span>~/Projects/HalliwillExerciseHistamineVascularHealth/scripts<span class="pl-pds">"</span></span>)</pre></div>
+<p>Load libraries.</p>
+<div class="highlight highlight-source-r"><pre>library(<span class="pl-smi">magrittr</span>)
+library(<span class="pl-smi">dplyr</span>)</pre></div>
+<pre><code>## 
+## Attaching package: 'dplyr'
+</code></pre>
+<pre><code>## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+</code></pre>
+<div class="highlight highlight-source-r"><pre>library(<span class="pl-smi">ggplot2</span>)
+library(<span class="pl-smi">svglite</span>)
+library(<span class="pl-smi">knitr</span>)
+library(<span class="pl-smi">pwr</span>)
+library(<span class="pl-smi">simr</span>)</pre></div>
+<pre><code>## Loading required package: lme4
+</code></pre>
+<pre><code>## Loading required package: Matrix
+</code></pre>
+<pre><code>## Loading required package: methods
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-c"><span class="pl-c">#</span> library(TrialSize)</span></pre></div>
+<p>Reproducibility steps.</p>
+<div class="highlight highlight-source-r"><pre>sessionInfo() %<span class="pl-k">&gt;</span>% print(<span class="pl-v">locale</span> <span class="pl-k">=</span> <span class="pl-c1">FALSE</span>)</pre></div>
+<pre><code>## R version 3.3.3 (2017-03-06)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 7 x64 (build 7601) Service Pack 1
+## 
+## attached base packages:
+## [1] methods   stats     graphics  grDevices utils     datasets  base     
+## 
+## other attached packages:
+##  [1] simr_1.0.2        lme4_1.1-12       Matrix_1.2-8     
+##  [4] pwr_1.2-1         svglite_1.2.0     ggplot2_2.2.1    
+##  [7] dplyr_0.5.0       magrittr_1.5      rmarkdown_1.4    
+## [10] knitr_1.15.1      checkpoint_0.3.16
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_0.12.10       nloptr_1.0.4       plyr_1.8.4        
+##  [4] iterators_1.0.8    tools_3.3.3        digest_0.6.12     
+##  [7] evaluate_0.10      tibble_1.2         gtable_0.2.0      
+## [10] nlme_3.1-131       lattice_0.20-35    mgcv_1.8-17       
+## [13] DBI_0.6            parallel_3.3.3     SparseM_1.76      
+## [16] stringr_1.2.0      MatrixModels_0.4-1 gdtools_0.1.4     
+## [19] rprojroot_1.2      grid_3.3.3         nnet_7.3-12       
+## [22] R6_2.2.0           plotrix_3.6-4      RLRsim_3.1-3      
+## [25] binom_1.1-1        minqa_1.2.4        car_2.1-4         
+## [28] backports_1.0.5    scales_0.4.1       htmltools_0.3.5   
+## [31] splines_3.3.3      MASS_7.3-45        pbkrtest_0.4-7    
+## [34] assertthat_0.1     colorspace_1.3-2   quantreg_5.29     
+## [37] stringi_1.1.3      lazyeval_0.2.0     munsell_0.4.3
+</code></pre>
+<div class="highlight highlight-source-r"><pre>set.seed(as.integer(as.Date(<span class="pl-s"><span class="pl-pds">"</span>2017-04-10<span class="pl-pds">"</span></span>)))</pre></div>
+<p>Source user-defined functions.</p>
+<div class="highlight highlight-source-r"><pre>sapply(list.files(<span class="pl-s"><span class="pl-pds">"</span>../lib<span class="pl-pds">"</span></span>, <span class="pl-v">full.names</span> <span class="pl-k">=</span> <span class="pl-c1">TRUE</span>), <span class="pl-smi">source</span>)</pre></div>
+<pre><code>##         ../lib/extractFixef.R ../lib/extractNgrps.R ../lib/extractPower.R
+## value   ?                     ?                     ?                    
+## visible FALSE                 FALSE                 FALSE                
+##         ../lib/extractS.R ../lib/extractV1.R ../lib/sim.R
+## value   ?                 ?                  ?           
+## visible FALSE             FALSE              FALSE
+</code></pre>
+<h2>
+<a id="user-content-references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+<div class="highlight highlight-source-r"><pre>citation()</pre></div>
+<pre><code>## 
+## To cite R in publications use:
+## 
+##   R Core Team (2017). R: A language and environment for
+##   statistical computing. R Foundation for Statistical Computing,
+##   Vienna, Austria. URL https://www.R-project.org/.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {R: A Language and Environment for Statistical Computing},
+##     author = {{R Core Team}},
+##     organization = {R Foundation for Statistical Computing},
+##     address = {Vienna, Austria},
+##     year = {2017},
+##     url = {https://www.R-project.org/},
+##   }
+## 
+## We have invested a lot of time and effort in creating R, please
+## cite it when using it for data analysis. See also
+## 'citation("pkgname")' for citing R packages.
+</code></pre>
+<div class="highlight highlight-source-r"><pre>citation(<span class="pl-s"><span class="pl-pds">"</span>pwr<span class="pl-pds">"</span></span>)</pre></div>
+<pre><code>## 
+## To cite package 'pwr' in publications use:
+## 
+##   Stephane Champely (2017). pwr: Basic Functions for Power
+##   Analysis. R package version 1.2-1.
+##   https://CRAN.R-project.org/package=pwr
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {pwr: Basic Functions for Power Analysis},
+##     author = {Stephane Champely},
+##     year = {2017},
+##     note = {R package version 1.2-1},
+##     url = {https://CRAN.R-project.org/package=pwr},
+##   }
+</code></pre>
+<div class="highlight highlight-source-r"><pre>citation(<span class="pl-s"><span class="pl-pds">"</span>simr<span class="pl-pds">"</span></span>)</pre></div>
+<pre><code>## 
+## Green P and MacLeod CJ (2016). "simr: an R package for power
+## analysis of generalised linear mixed models by simulation."
+## _Methods in Ecology and Evolution_, *7*(4), pp. 493-498. doi:
+## 10.1111/2041-210X.12504 (URL:
+## http://doi.org/10.1111/2041-210X.12504), &lt;URL:
+## https://CRAN.R-project.org/package=simr&gt;.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Article{,
+##     title = {simr: an R package for power analysis of generalised linear mixed models by simulation},
+##     author = {Peter Green and Catriona J. MacLeod},
+##     journal = {Methods in Ecology and Evolution},
+##     volume = {7},
+##     number = {4},
+##     pages = {493--498},
+##     year = {2016},
+##     doi = {10.1111/2041-210X.12504},
+##     url = {https://CRAN.R-project.org/package=simr},
+##   }
+</code></pre>
+<h1>
+<a id="user-content-power-and-sample-size" class="anchor" href="#power-and-sample-size" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Power and sample size</h1>
+<p>Use research plan described in <a href="background/RESEARCH_PLAN_03.23.2017.docx"><code>RESEARCH_PLAN_03.23.2017.docx</code></a>.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">alpha</span> <span class="pl-k">&lt;-</span> <span class="pl-c1">0.05</span>
+<span class="pl-smi">beta</span> <span class="pl-k">&lt;-</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> <span class="pl-c1">0.90</span></pre></div>
+<h2>
+<a id="user-content-aim-1" class="anchor" href="#aim-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aim 1</h2>
+<p>Identify the exercise-related signal that causes histamine release in skeletal muscle</p>
+<ul>
+<li>Blocking on subject, matched pairs</li>
+<li>One-factor design
+<ul>
+<li>Factor: heat or unheated (Aim 1a)</li>
+<li>Factor: rest or exercise (Aim 1b)</li>
+</ul>
+</li>
+<li>Aim 1a and 1b use two separate cohorts of subjects</li>
+<li>Randomize which leg receives heat (Aim 1a) and performs exercise (Aim 1b)</li>
+<li>Assume the effect of heat (1a) and exercise (1b) are highly correlated;
+i.e., only need to run power/sample-size calculations for 1 sub-aim</li>
+<li>Power on the pre-to-during experimental condition comparison
+<ul>
+<li>Not necessary to power on the pre-to-post comparison</li>
+</ul>
+</li>
+</ul>
+<p>Use the <em>Effect size</em> column in the <em>Sample sizes</em> tab of the Excel workbook file
+<a href="background/Models%5Csand%5CsSample%5Cssize%5Csestimates%5Cs3.17.2017.xlsx"><code>Models and Sample size estimates 3.17.2017.xlsx</code></a>.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">effectSizes</span> <span class="pl-k">&lt;-</span> c(<span class="pl-c1">1.44</span>, <span class="pl-c1">1.74</span>)
+<span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> pwr.t.test(<span class="pl-v">d</span> <span class="pl-k">=</span> min(<span class="pl-smi">effectSizes</span>),
+                    <span class="pl-v">sig.level</span> <span class="pl-k">=</span> <span class="pl-smi">alpha</span>, <span class="pl-v">power</span> <span class="pl-k">=</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> <span class="pl-smi">beta</span>, 
+                    <span class="pl-v">type</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>one.sample<span class="pl-pds">"</span></span>)
+message(sprintf(<span class="pl-s"><span class="pl-pds">"</span>Estimated sample size for Aim 1: %d<span class="pl-pds">"</span></span>,
+                ceiling(<span class="pl-smi">power</span>[[<span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>]])))</pre></div>
+<pre><code>## Estimated sample size for Aim 1: 8
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">L</span> <span class="pl-k">&lt;-</span> <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim1<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>)</pre></div>
+<h2>
+<a id="user-content-aim-2" class="anchor" href="#aim-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aim 2</h2>
+<p>Determine the histaminergic component of endothelial and vascular smooth muscle responses to exercise</p>
+<ul>
+<li>Two-factor design
+<ul>
+<li>Factor A: rest or exercise (nuisance)</li>
+<li>Factor B: no blockade, <em>in vitro</em> blockade, or <em>in vivo</em> blockade</li>
+</ul>
+</li>
+<li>Blocking on subject
+<ul>
+<li>Each subject has measurements for each $A \times B$ combination</li>
+</ul>
+</li>
+<li>Randomize blockade factor</li>
+</ul>
+<hr>
+<blockquote>
+<p>From: <a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a> [mailto:<a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a>] On Behalf Of John Halliwill, PhD<br>
+Sent: Tuesday, April 04, 2017 12:06 PM<br>
+To: Benjamin Chan <a href="mailto:chanb@ohsu.edu">chanb@ohsu.edu</a><br>
+Subject: Re: Statistical consultant for R01</p>
+<p>OK, changing out of all caps mode... for Aim 2, I am going to place two
+microdialysis fibers in each subject, and randomize one to control (no drug)
+and the other to blockade. Then I will collect samples before and during
+exercise. All this will be done in each subject. When we take the dialysate to
+cell culture, we can add drugs to half the control samples to create our in
+vitro blockade group. This means that every condition is generated in every
+subject. We can randomize control, in vivo blockade, and in vitro blockade,
+but we can't randomize resting (pre-exercise) versus exercise. I hope that
+makes sense.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>From: <a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a> [mailto:<a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a>] On Behalf Of John Halliwill, PhD<br>
+Sent: Tuesday, April 04, 2017 2:47 PM<br>
+To: Benjamin Chan <a href="mailto:chanb@ohsu.edu">chanb@ohsu.edu</a><br>
+Subject: Re: Statistical consultant for R01</p>
+<p>[Ben] This sounds like there will be imbalance in the blockade factor
+(25:25:50 split between control : in vitro blockade : in vivo blockade). Is
+this the intent? Am I missing something?</p>
+<p>Step 1: In vivo blockade or not in vivo blockade (50:50 split)</p>
+<p>Step 2: Among not in vivo blockade, split into control or in vitro blockade (50:50 split of the 50%)</p>
+<p>FOR AIM 2, THE PROCESS OF STEPS YOU DESCRIBE IS CORRECT. WE WILL JUST END UP WITH LEFTOVER DIALYSATE FROM THE IN VIVO BLOCKADE PROBES.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>From: <a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a> [mailto:<a href="mailto:halliwil@cas.uoregon.edu">halliwil@cas.uoregon.edu</a>] On Behalf Of John Halliwill, PhD<br>
+Sent: Tuesday, April 11, 2017 3:12 PM<br>
+To: Benjamin Chan <a href="mailto:chanb@ohsu.edu">chanb@ohsu.edu</a><br>
+Subject: Re: Statistical consultant for R01</p>
+<p>We are interested in the exercise conditions across the three blockade states.
+Since we will have the data, we will look at the rest condition across the three blockade states as an experimental control -
+there shouldn't be any effect of blockade on resting data.</p>
+</blockquote>
+<p>Attempt to bracket sample size.</p>
+<p><strong>Most conservative estimate.</strong>
+Residual variance is $2.5\times$ effect size.
+Number of subjects is 44.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> sim(<span class="pl-v">s</span> <span class="pl-k">=</span> <span class="pl-c1">2.5</span>, <span class="pl-v">n</span> <span class="pl-k">=</span> <span class="pl-c1">44</span>)
+<span class="pl-smi">L2</span> <span class="pl-k">&lt;-</span> <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim2_scenarioA<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>)
+<span class="pl-smi">power</span></pre></div>
+<pre><code>## $lme
+## Linear mixed model fit by REML ['lmerMod']
+## Formula: y ~ a + b + (1 | subject)
+##    Data: df
+## REML criterion at convergence: 1444.129
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  subject  (Intercept) 1.18    
+##  Residual             2.95    
+## Number of obs: 264, groups:  subject, 44
+## Fixed Effects:
+##        (Intercept)           aExercise  bIn vitro blockade  
+##               0.00                1.18                0.00  
+##  bIn vivo blockade  
+##               0.00  
+## 
+## $power
+## Power for predictor 'a', (95% confidence interval):
+##       88.50% (83.25, 92.57)
+## 
+## Test: Likelihood ratio
+## 
+## Based on 200 simulations, (0 warnings, 0 errors)
+## alpha = 0.05, nrow = 264
+## 
+## Time elapsed: 0 h 0 m 35 s
+</code></pre>
+<p><strong>Moderate-high conservative estimate.</strong>
+Residual variance is $2.2\times$ effect size.
+Number of subjects is 32.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> sim(<span class="pl-v">s</span> <span class="pl-k">=</span> <span class="pl-c1">2.2</span>, <span class="pl-v">n</span> <span class="pl-k">=</span> <span class="pl-c1">32</span>)
+<span class="pl-smi">L2</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L2</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim2_scenarioB<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))
+<span class="pl-smi">power</span></pre></div>
+<pre><code>## $lme
+## Linear mixed model fit by REML ['lmerMod']
+## Formula: y ~ a + b + (1 | subject)
+##    Data: df
+## REML criterion at convergence: 959.0521
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  subject  (Intercept) 1.180   
+##  Residual             2.596   
+## Number of obs: 192, groups:  subject, 32
+## Fixed Effects:
+##        (Intercept)           aExercise  bIn vitro blockade  
+##               0.00                1.18                0.00  
+##  bIn vivo blockade  
+##               0.00  
+## 
+## $power
+## Power for predictor 'a', (95% confidence interval):
+##       88.50% (83.25, 92.57)
+## 
+## Test: Likelihood ratio
+## 
+## Based on 200 simulations, (1 warning, 0 errors)
+## alpha = 0.05, nrow = 192
+## 
+## Time elapsed: 0 h 0 m 36 s
+</code></pre>
+<p><strong>Moderately conservative estimate.</strong>
+Residual variance is $1.8\times$ effect size.
+Number of subjects is 22.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> sim(<span class="pl-v">s</span> <span class="pl-k">=</span> <span class="pl-c1">1.8</span>, <span class="pl-v">n</span> <span class="pl-k">=</span> <span class="pl-c1">22</span>)
+<span class="pl-smi">L2</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L2</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim2_scenarioC<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))
+<span class="pl-smi">power</span></pre></div>
+<pre><code>## $lme
+## Linear mixed model fit by REML ['lmerMod']
+## Formula: y ~ a + b + (1 | subject)
+##    Data: df
+## REML criterion at convergence: 579.9356
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  subject  (Intercept) 1.180   
+##  Residual             2.124   
+## Number of obs: 132, groups:  subject, 22
+## Fixed Effects:
+##        (Intercept)           aExercise  bIn vitro blockade  
+##               0.00                1.18                0.00  
+##  bIn vivo blockade  
+##               0.00  
+## 
+## $power
+## Power for predictor 'a', (95% confidence interval):
+##       89.50% (84.40, 93.38)
+## 
+## Test: Likelihood ratio
+## 
+## Based on 200 simulations, (0 warnings, 0 errors)
+## alpha = 0.05, nrow = 132
+## 
+## Time elapsed: 0 h 0 m 32 s
+</code></pre>
+<p><strong>Moderate-low conservative estimate.</strong>
+Residual variance is $1.5\times$ effect size.
+Number of subjects is 14.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> sim(<span class="pl-v">s</span> <span class="pl-k">=</span> <span class="pl-c1">1.5</span>, <span class="pl-v">n</span> <span class="pl-k">=</span> <span class="pl-c1">14</span>)
+<span class="pl-smi">L2</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L2</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim2_scenarioD<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))
+<span class="pl-smi">power</span></pre></div>
+<pre><code>## $lme
+## Linear mixed model fit by REML ['lmerMod']
+## Formula: y ~ a + b + (1 | subject)
+##    Data: df
+## REML criterion at convergence: 351.0222
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  subject  (Intercept) 1.18    
+##  Residual             1.77    
+## Number of obs: 84, groups:  subject, 14
+## Fixed Effects:
+##        (Intercept)           aExercise  bIn vitro blockade  
+##               0.00                1.18                0.00  
+##  bIn vivo blockade  
+##               0.00  
+## 
+## $power
+## Power for predictor 'a', (95% confidence interval):
+##       89.00% (83.82, 92.98)
+## 
+## Test: Likelihood ratio
+## 
+## Based on 200 simulations, (0 warnings, 0 errors)
+## alpha = 0.05, nrow = 84
+## 
+## Time elapsed: 0 h 0 m 31 s
+</code></pre>
+<p><strong>Least conservative estimate.</strong>
+Residual variance is $1.2\times$ effect size.
+Number of subjects is 9.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> sim(<span class="pl-v">s</span> <span class="pl-k">=</span> <span class="pl-c1">1.2</span>, <span class="pl-v">n</span> <span class="pl-k">=</span> <span class="pl-c1">9</span>)
+<span class="pl-smi">L2</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L2</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim2_scenarioE<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))
+<span class="pl-smi">power</span></pre></div>
+<pre><code>## $lme
+## Linear mixed model fit by REML ['lmerMod']
+## Formula: y ~ a + b + (1 | subject)
+##    Data: df
+## REML criterion at convergence: 197.7338
+## Random effects:
+##  Groups   Name        Std.Dev.
+##  subject  (Intercept) 1.180   
+##  Residual             1.416   
+## Number of obs: 54, groups:  subject, 9
+## Fixed Effects:
+##        (Intercept)           aExercise  bIn vitro blockade  
+##               0.00                1.18                0.00  
+##  bIn vivo blockade  
+##               0.00  
+## 
+## $power
+## Power for predictor 'a', (95% confidence interval):
+##       92.50% (87.93, 95.74)
+## 
+## Test: Likelihood ratio
+## 
+## Based on 200 simulations, (1 warning, 0 errors)
+## alpha = 0.05, nrow = 54
+## 
+## Time elapsed: 0 h 0 m 33 s
+</code></pre>
+<h2>
+<a id="user-content-aim-3" class="anchor" href="#aim-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aim 3</h2>
+<p>Determine the impact of histamine on short-term inflammatory responses to exercise</p>
+<ul>
+<li>Randomized crossover design</li>
+<li>One-factor design
+<ul>
+<li>Factor A: control or blockade</li>
+<li>Include 1-week washout period</li>
+</ul>
+</li>
+<li>Blocking on subject</li>
+<li>Randomize order of factor</li>
+<li>Repeated measurements at t = 0, 3, 6, 12, 24, 48h but only interested in <em>peak</em> values
+<ul>
+<li>Reduce analysis to paired sample test, pre vs peak change</li>
+</ul>
+</li>
+</ul>
+<p>Use the <em>Effect size</em> column in the <em>Sample sizes</em> tab of the Excel workbook file
+<a href="background/Models%5Csand%5CsSample%5Cssize%5Csestimates%5Cs3.17.2017.xlsx"><code>Models and Sample size estimates 3.17.2017.xlsx</code></a>.</p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">effectSizes</span> <span class="pl-k">&lt;-</span> c(<span class="pl-c1">1.82</span>, <span class="pl-c1">2.19</span>, <span class="pl-c1">0.98</span>)
+<span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> pwr.t.test(<span class="pl-v">d</span> <span class="pl-k">=</span> min(<span class="pl-smi">effectSizes</span>),
+                    <span class="pl-v">sig.level</span> <span class="pl-k">=</span> <span class="pl-smi">alpha</span>, <span class="pl-v">power</span> <span class="pl-k">=</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> <span class="pl-smi">beta</span>, 
+                    <span class="pl-v">type</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>one.sample<span class="pl-pds">"</span></span>)
+message(sprintf(<span class="pl-s"><span class="pl-pds">"</span>Estimated sample size for Aim 3: %d<span class="pl-pds">"</span></span>,
+                ceiling(<span class="pl-smi">power</span>[[<span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>]])))</pre></div>
+<pre><code>## Estimated sample size for Aim 3: 14
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">L</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim3<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))</pre></div>
+<h2>
+<a id="user-content-aim-4" class="anchor" href="#aim-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aim 4</h2>
+<p>Determine the histamine component of longer-term adaptations to exercise training</p>
+<ul>
+<li>Randomized controlled trial</li>
+<li>Randomize control or blockade</li>
+<li>One consideration here is how to handle subject dropout and resulting
+missing data. We would want to know if more/fewer blockade subjects drop out
+compared to control (could be a problem), so that is something like
+"intention to treat" (but i may not use that phrase correctly). On the other
+hand, we want to know (more important) whether blockade has an effect on
+adaptation in those who do complete the training (which is different than
+intention to treat. if they don't complete the training, then they don't
+help us answer this question). I have seen this concept lead to confusion
+during grant reviews, so we want to make sure we are clear how we are
+thinking about this and handling it in the stats.</li>
+<li>Analyze as <em>per protocol</em> analysis
+<ul>
+<li>Only subjects who completed the protocol are analyzed</li>
+<li>This can be justified but needs to be stated up front</li>
+<li>Ref: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210</a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">dropout</span> <span class="pl-k">&lt;-</span> <span class="pl-c1">0.20</span>
+<span class="pl-smi">effectSizes</span> <span class="pl-k">&lt;-</span> c(<span class="pl-c1">2.55</span>, <span class="pl-c1">1.54</span>, <span class="pl-c1">1.50</span>)
+<span class="pl-smi">power</span> <span class="pl-k">&lt;-</span> pwr.t.test(<span class="pl-v">d</span> <span class="pl-k">=</span> min(<span class="pl-smi">effectSizes</span>),
+                    <span class="pl-v">sig.level</span> <span class="pl-k">=</span> <span class="pl-smi">alpha</span>, <span class="pl-v">power</span> <span class="pl-k">=</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> <span class="pl-smi">beta</span>, 
+                    <span class="pl-v">type</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>two.sample<span class="pl-pds">"</span></span>)
+message(sprintf(<span class="pl-s"><span class="pl-pds">"</span>Estimated sample size for Aim 4: %d in each group<span class="pl-pds">"</span></span>,
+                ceiling(<span class="pl-smi">power</span>[[<span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>]] <span class="pl-k">*</span> (<span class="pl-c1">1</span> <span class="pl-k">+</span> <span class="pl-smi">dropout</span>))))</pre></div>
+<pre><code>## Estimated sample size for Aim 4: 13 in each group
+</code></pre>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">L</span> <span class="pl-k">&lt;-</span> c(<span class="pl-smi">L</span>, <span class="pl-k">list</span>(<span class="pl-s"><span class="pl-pds">"</span>aim4<span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-smi">power</span>))</pre></div>
+<h1>
+<a id="user-content-summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h1>
+<p>Aims 1, 3, and 4 are straightforward study designs.
+Their power and sample size calculations are also straightforward.
+The calculations are summarized below.</p>
+<table>
+<thead>
+<tr>
+<th align="right">Aim</th>
+<th align="left">Study design</th>
+<th align="left">Statistical model</th>
+<th align="right">Min. hypothesized effect size</th>
+<th align="right">Total sample size</th>
+<th align="left">Additional notes</th>
+<th align="right">Alpha level</th>
+<th align="left">Power</th>
+<th align="left">Sidedness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left">One-sample matched pairs</td>
+<td align="left">One-sample t-test</td>
+<td align="right">1.44</td>
+<td align="right">8</td>
+<td align="left">NA</td>
+<td align="right">0.05</td>
+<td align="left">90%</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">One-sample randomized crossover</td>
+<td align="left">One-sample t-test</td>
+<td align="right">0.98</td>
+<td align="right">14</td>
+<td align="left">NA</td>
+<td align="right">0.05</td>
+<td align="left">90%</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Two-sample RCT</td>
+<td align="left">Two-sample t-test</td>
+<td align="right">1.50</td>
+<td align="right">26</td>
+<td align="left">Per protocol analysis; 50:50 ratio of study groups; sample size assumes 20% dropout</td>
+<td align="right">0.05</td>
+<td align="left">90%</td>
+<td align="left">Two-sided</td>
+</tr>
+</tbody>
+</table>
+<p>Aim 2 is more complicated.
+The study design is a full factorial design with two factors and blocking on subject.
+I.e., each subject experiences each experimental condition under the factors of exercise (rest or exercise) and blockade (none, in vitro, and in vivo).
+The statistical model is a mixed effects model with two fixed effects for the factors and a random intercept effect for subject.
+Power and sample size was determined using simulations with the <code>simr</code> package.
+Power was calculated by bracketing over a number of scenarios with varying residual variance, <code>s</code>.
+Simulation parameters held constant were: effect size and random intercept variance, <code>V1</code>, which was set to equal the squared effect size.
+Sample sizes were chosen to give a power near 90%.
+From the table below, you can see that the relationship between sample size and residual SD is increasing;
+i.e., in the presence of higher residual variance, a larger sample size is required.</p>
+<table>
+<thead>
+<tr>
+<th align="right">Aim</th>
+<th align="right">Hypothesized effect size</th>
+<th align="right">Subject SD</th>
+<th align="right">Residual SD</th>
+<th align="right">Sample size</th>
+<th align="left">Power</th>
+<th align="right">Alpha level</th>
+<th align="left">Sidedness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">2</td>
+<td align="right">1.18</td>
+<td align="right">1.18</td>
+<td align="right">2.950</td>
+<td align="right">44</td>
+<td align="left">88.5%</td>
+<td align="right">0.05</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1.18</td>
+<td align="right">1.18</td>
+<td align="right">2.596</td>
+<td align="right">32</td>
+<td align="left">88.5%</td>
+<td align="right">0.05</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1.18</td>
+<td align="right">1.18</td>
+<td align="right">2.124</td>
+<td align="right">22</td>
+<td align="left">89.5%</td>
+<td align="right">0.05</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1.18</td>
+<td align="right">1.18</td>
+<td align="right">1.770</td>
+<td align="right">14</td>
+<td align="left">89.0%</td>
+<td align="right">0.05</td>
+<td align="left">Two-sided</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1.18</td>
+<td align="right">1.18</td>
+<td align="right">1.416</td>
+<td align="right">9</td>
+<td align="left">92.5%</td>
+<td align="right">0.05</td>
+<td align="left">Two-sided</td>
+</tr>
+</tbody>
+</table>
+</article></body></html>

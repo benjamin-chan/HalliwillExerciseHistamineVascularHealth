@@ -70,6 +70,36 @@ eIRB # | IRB00000000
 
 ## Results
 
+Aims 1, 3, and 4 are straightforward study designs.
+Their power and sample size calculations are also straightforward.
+The calculations are summarized below.
+
+
+| Aim|Study design                    |Statistical model | Min. hypothesized effect size| Total sample size|Additional notes                                                                    | Alpha level|Power |Sidedness |
+|---:|:-------------------------------|:-----------------|-----------------------------:|-----------------:|:-----------------------------------------------------------------------------------|-----------:|:-----|:---------|
+|   1|One-sample matched pairs        |One-sample t-test |                          1.44|                 8|NA                                                                                  |        0.05|90%   |Two-sided |
+|   3|One-sample randomized crossover |One-sample t-test |                          0.98|                14|NA                                                                                  |        0.05|90%   |Two-sided |
+|   4|Two-sample RCT                  |Two-sample t-test |                          1.50|                26|Per protocol analysis; 50:50 ratio of study groups; sample size assumes 20% dropout |        0.05|90%   |Two-sided |
+
+Aim 2 is more complicated.
+The study design is a full factorial design with two factors and blocking on subject.
+I.e., each subject experiences each experimental condition under the factors of exercise (rest or exercise) and blockade (none, in vitro, and in vivo).
+The statistical model is a mixed effects model with two fixed effects for the factors and a random intercept effect for subject.
+Power and sample size was determined using simulations with the `simr` package.
+Power was calculated by bracketing over a number of scenarios with varying residual variance, `s`.
+Simulation parameters held constant were: effect size and random intercept variance, `V1`, which was set to equal the squared effect size.
+Sample sizes were chosen to give a power near 90%.
+From the table below, you can see that the relationship between sample size and residual SD is increasing;
+i.e., in the presence of higher residual variance, a larger sample size is required.
+
+
+| Aim| Hypothesized effect size| Subject SD| Residual SD| Sample size|Power | Alpha level|Sidedness |
+|---:|------------------------:|----------:|-----------:|-----------:|:-----|-----------:|:---------|
+|   2|                     1.18|       1.18|       2.950|          44|88.5% |        0.05|Two-sided |
+|   2|                     1.18|       1.18|       2.596|          32|88.5% |        0.05|Two-sided |
+|   2|                     1.18|       1.18|       2.124|          22|89.5% |        0.05|Two-sided |
+|   2|                     1.18|       1.18|       1.770|          14|89.0% |        0.05|Two-sided |
+|   2|                     1.18|       1.18|       1.416|           9|92.5% |        0.05|Two-sided |
 
 
 ## Methods
@@ -90,7 +120,7 @@ citation()
 ## 
 ## To cite R in publications use:
 ## 
-##   R Core Team (2016). R: A language and environment for
+##   R Core Team (2017). R: A language and environment for
 ##   statistical computing. R Foundation for Statistical Computing,
 ##   Vienna, Austria. URL https://www.R-project.org/.
 ## 
@@ -101,7 +131,7 @@ citation()
 ##     author = {{R Core Team}},
 ##     organization = {R Foundation for Statistical Computing},
 ##     address = {Vienna, Austria},
-##     year = {2016},
+##     year = {2017},
 ##     url = {https://www.R-project.org/},
 ##   }
 ## 
@@ -110,6 +140,56 @@ citation()
 ## 'citation("pkgname")' for citing R packages.
 ```
 
+```r
+citation("pwr")
+```
+
+```
+## 
+## To cite package 'pwr' in publications use:
+## 
+##   Stephane Champely (2017). pwr: Basic Functions for Power
+##   Analysis. R package version 1.2-1.
+##   https://CRAN.R-project.org/package=pwr
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {pwr: Basic Functions for Power Analysis},
+##     author = {Stephane Champely},
+##     year = {2017},
+##     note = {R package version 1.2-1},
+##     url = {https://CRAN.R-project.org/package=pwr},
+##   }
+```
+
+```r
+citation("simr")
+```
+
+```
+## 
+## Green P and MacLeod CJ (2016). "simr: an R package for power
+## analysis of generalised linear mixed models by simulation."
+## _Methods in Ecology and Evolution_, *7*(4), pp. 493-498. doi:
+## 10.1111/2041-210X.12504 (URL:
+## http://doi.org/10.1111/2041-210X.12504), <URL:
+## https://CRAN.R-project.org/package=simr>.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Article{,
+##     title = {simr: an R package for power analysis of generalised linear mixed models by simulation},
+##     author = {Peter Green and Catriona J. MacLeod},
+##     journal = {Methods in Ecology and Evolution},
+##     volume = {7},
+##     number = {4},
+##     pages = {493--498},
+##     year = {2016},
+##     doi = {10.1111/2041-210X.12504},
+##     url = {https://CRAN.R-project.org/package=simr},
+##   }
+```
 
 
 ## Reproducibility
