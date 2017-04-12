@@ -211,7 +211,7 @@ Aims 1, 3, and 4 are straightforward study designs.
 Their power and sample size calculations are also straightforward.
 The calculations are summarized below.
 
-```{r}
+```{r, echo = FALSE}
 power <- 
   rbind(data.frame(aim = 1, 
                    design = "One-sample matched pairs", model = "One-sample t-test", 
@@ -227,11 +227,21 @@ power <-
                    design = "Two-sample RCT", model = "Two-sample t-test", 
                    effectSize = L[["aim4"]][["d"]],
                    n = ceiling(L[["aim4"]][["n"]] * (1 + dropout)) * 2,
-                   notes = sprintf("Per protocol analysis\nSample size assumes %.00f%% dropout", dropout * 100))) %>% 
+                   notes = sprintf("Per protocol analysis; 50:50 ratio of study groups; sample size assumes %.00f%% dropout", dropout * 100))) %>% 
   mutate(alpha = alpha, 
          power = sprintf("%.00f%%", (1 - beta) * 100), 
          hypothesis = "Two-sided")
-power %>% kable
+power %>% 
+  rename("Aim" = aim,
+         "Study design" = design,
+         "Statistical model" = model,
+         "Min. hypothesized effect size" = effectSize,
+         "Total sample size" = n,
+         "Additional notes" = notes,
+         "Alpha level" = alpha,
+         "Power" = power,
+         "Sidedness" = hypothesis) %>% 
+  kable
 ```
 
 Aim 2 is more complicated.
