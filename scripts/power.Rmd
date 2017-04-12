@@ -118,34 +118,52 @@ sim <- function (s = 1, n = 10) {
 
 **Most conservative estimate.**
 Residual variance is $2.5\times$ effect size.
-Number of subjects is 35.
+Number of subjects is 44.
 
 ```{r}
-sim(s = 2.5, n = 44)
+power <- sim(s = 2.5, n = 44)
+L2 <- list("aim2_scenarioA" = power)
+power
 ```
 
 **Moderate-high conservative estimate.**
-Residual variance is $1.5\times$ effect size.
-Number of subjects is 16
+Residual variance is $2.2\times$ effect size.
+Number of subjects is 32.
 
 ```{r}
-sim(s = 2.0, n = 28)
+power <- sim(s = 2.2, n = 32)
+L2 <- c(L2, list("aim2_scenarioB" = power))
+power
+```
+
+**Moderately conservative estimate.**
+Residual variance is $1.8\times$ effect size.
+Number of subjects is 22.
+
+```{r}
+power <- sim(s = 1.8, n = 22)
+L2 <- c(L2, list("aim2_scenarioC" = power))
+power
 ```
 
 **Moderate-low conservative estimate.**
 Residual variance is $1.5\times$ effect size.
-Number of subjects is 16
+Number of subjects is 14.
 
 ```{r}
-sim(s = 1.5, n = 16)
+power <- sim(s = 1.5, n = 14)
+L2 <- c(L2, list("aim2_scenarioD" = power))
+power
 ```
 
 **Least conservative estimate.**
 Residual variance is $1.2\times$ effect size.
-Number of subjects is 12
+Number of subjects is 9.
 
 ```{r}
-sim(s = 1.2, n = 12)
+power <- sim(s = 1.2, n = 9)
+L2 <- c(L2, list("aim2_scenarioE" = power))
+power
 ```
 
 # Aim 3
@@ -210,18 +228,14 @@ L <- c(L, list("aim4" = power))
 
 # Summary
 
+Aims 1, 3, and 4.
+
 ```{r}
 power <- 
   rbind(data.frame(aim = 1, 
                    design = "One-sample matched pairs", model = "One-sample t-test", 
                    effectSize = L[["aim1"]][["d"]],
                    n = ceiling(L[["aim1"]][["n"]]), 
-                   notes = NA_character_),
-        data.frame(aim = 2, 
-                   design = "Two-factor, blocked design",
-                   model = "Mixed effects model, 2 fixed effects, random effect for subject", 
-                   effectSize = NA,
-                   n = NA, 
                    notes = NA_character_),
         data.frame(aim = 3, 
                    design = "One-sample randomized crossover", model = "One-sample t-test", 
@@ -238,3 +252,6 @@ power <-
          hypothesis = "Two-sided")
 power %>% kable
 ```
+
+Aim 2.
+See simulations.
