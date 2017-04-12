@@ -7,7 +7,8 @@ Sys.time0 <- Sys.time()
 
 sink("script.log")
 files <- c("header.yaml",
-           "preamble.Rmd")
+           "preamble.Rmd",
+           "power.Rmd")
 f <- file("master.Rmd", open = "w")
 for (i in 1:length(files)) {
     x <- readLines(files[i])
@@ -25,5 +26,5 @@ sink()
 sink("session.log")
 list(completionDateTime = Sys.time(),
      executionTime = Sys.time() - Sys.time0,
-     sessionInfo = sessionInfo())
+     sessionInfo = sessionInfo(locale = FALSE))
 sink()
