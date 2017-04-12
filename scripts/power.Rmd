@@ -234,3 +234,48 @@ power %>% kable
 
 Aim 2.
 See simulations.
+```{r, echo = FALSE}
+n <- c(extractNgrps("aim2_scenarioA"),
+       extractNgrps("aim2_scenarioB"),
+       extractNgrps("aim2_scenarioC"),
+       extractNgrps("aim2_scenarioD"),
+       extractNgrps("aim2_scenarioE"))
+effectSizes <- c(extractFixef("aim2_scenarioA"),
+                 extractFixef("aim2_scenarioB"),
+                 extractFixef("aim2_scenarioC"),
+                 extractFixef("aim2_scenarioD"),
+                 extractFixef("aim2_scenarioE"))
+s <- c(extractS("aim2_scenarioA"),
+       extractS("aim2_scenarioB"),
+       extractS("aim2_scenarioC"),
+       extractS("aim2_scenarioD"),
+       extractS("aim2_scenarioE"))
+V1 <- c(extractV1("aim2_scenarioA"),
+        extractV1("aim2_scenarioB"),
+        extractV1("aim2_scenarioC"),
+        extractV1("aim2_scenarioD"),
+        extractV1("aim2_scenarioE"))
+power <- c(extractPower("aim2_scenarioA"),
+           extractPower("aim2_scenarioB"),
+           extractPower("aim2_scenarioC"),
+           extractPower("aim2_scenarioD"),
+           extractPower("aim2_scenarioE"))
+power <- data.frame(aim = 2, 
+                    effectSizes, 
+                    V1, 
+                    s, 
+                    n, 
+                    power = sprintf("%.01f%%", power * 100), 
+                    alpha = alpha, 
+                    hypothesis = "Two-sided")
+power %>% 
+  rename("Aim" = aim,
+         "Hypothesized effect size" = effectSizes,
+         "Subject SD" = V1,
+         "Residual SD" = s,
+         "Sample size" = n,
+         "Power" = power,
+         "Alpha level" = alpha,
+         "Sidedness" = hypothesis) %>% 
+  kable
+```
