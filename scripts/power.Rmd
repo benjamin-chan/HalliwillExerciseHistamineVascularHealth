@@ -93,7 +93,8 @@ Determine the histaminergic component of endothelial and vascular smooth muscle 
 > Since we will have the data, we will look at the rest condition across the three blockade states as an experimental control - 
 > there shouldn't be any effect of blockade on resting data. 
 
-Build model object.
+Attempt to bracket sample size.
+
 Define a function to simulate power from a mixed model using global simulation parameters.
 
 ```{r}
@@ -114,15 +115,38 @@ sim <- function (s = 1, n = 10) {
   list(lme = M, power = power)
 }
 ```
-```
 
-Simulate power.
+**Most conservative estimate.**
+Residual variance is $2.5\times$ effect size.
+Number of subjects is 35.
 
 ```{r}
-power <- powerSim(M, nsim = 100)
-power
+sim(s = 2.5, n = 44)
 ```
 
+**Moderate-high conservative estimate.**
+Residual variance is $1.5\times$ effect size.
+Number of subjects is 16
+
+```{r}
+sim(s = 2.0, n = 28)
+```
+
+**Moderate-low conservative estimate.**
+Residual variance is $1.5\times$ effect size.
+Number of subjects is 16
+
+```{r}
+sim(s = 1.5, n = 16)
+```
+
+**Least conservative estimate.**
+Residual variance is $1.2\times$ effect size.
+Number of subjects is 12
+
+```{r}
+sim(s = 1.2, n = 12)
+```
 
 # Aim 3
 
