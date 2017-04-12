@@ -37,7 +37,7 @@ L <- list("aim1" = power)
 ```
 
 
-# Aim 2
+## Aim 2
 
 Determine the histaminergic component of endothelial and vascular smooth muscle responses to exercise
 
@@ -145,7 +145,7 @@ L2 <- c(L2, list("aim2_scenarioE" = power))
 power
 ```
 
-# Aim 3
+## Aim 3
 
 Determine the impact of histamine on short-term inflammatory responses to exercise
 
@@ -172,7 +172,7 @@ L <- c(L, list("aim3" = power))
 ```
 
 
-# Aim 4
+## Aim 4
 
 Determine the histamine component of longer-term adaptations to exercise training
 
