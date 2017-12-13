@@ -1,6 +1,6 @@
 ---
 title: "Halliwill: Exercise, Histamine Receptors, and Vascular Health in Aging"
-date: "2017-04-12 08:59:46"
+date: "2017-12-13 12:41:16"
 author: Benjamin Chan (chanb@ohsu.edu)
 output:
   html_document:
@@ -81,10 +81,9 @@ sessionInfo() %>% print(locale = FALSE)
 ## [1] methods   stats     graphics  grDevices utils     datasets  base     
 ## 
 ## other attached packages:
-##  [1] simr_1.0.2        lme4_1.1-12       Matrix_1.2-8     
-##  [4] pwr_1.2-1         svglite_1.2.0     ggplot2_2.2.1    
-##  [7] dplyr_0.5.0       magrittr_1.5      rmarkdown_1.4    
-## [10] knitr_1.15.1      checkpoint_0.3.16
+##  [1] simr_1.0.2       lme4_1.1-12      Matrix_1.2-8     pwr_1.2-1       
+##  [5] svglite_1.2.0    ggplot2_2.2.1    dplyr_0.5.0      magrittr_1.5    
+##  [9] rmarkdown_1.4    knitr_1.15.1     checkpoint_0.4.0
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_0.12.10       nloptr_1.0.4       plyr_1.8.4        
@@ -347,7 +346,7 @@ power
 ## Based on 200 simulations, (0 warnings, 0 errors)
 ## alpha = 0.05, nrow = 264
 ## 
-## Time elapsed: 0 h 0 m 35 s
+## Time elapsed: 0 h 0 m 28 s
 ```
 
 **Moderate-high conservative estimate.**
@@ -387,7 +386,7 @@ power
 ## Based on 200 simulations, (1 warning, 0 errors)
 ## alpha = 0.05, nrow = 192
 ## 
-## Time elapsed: 0 h 0 m 36 s
+## Time elapsed: 0 h 1 m 6 s
 ```
 
 **Moderately conservative estimate.**
@@ -427,7 +426,7 @@ power
 ## Based on 200 simulations, (0 warnings, 0 errors)
 ## alpha = 0.05, nrow = 132
 ## 
-## Time elapsed: 0 h 0 m 32 s
+## Time elapsed: 0 h 1 m 16 s
 ```
 
 **Moderate-low conservative estimate.**
@@ -467,7 +466,7 @@ power
 ## Based on 200 simulations, (0 warnings, 0 errors)
 ## alpha = 0.05, nrow = 84
 ## 
-## Time elapsed: 0 h 0 m 31 s
+## Time elapsed: 0 h 1 m 4 s
 ```
 
 **Least conservative estimate.**
@@ -507,7 +506,7 @@ power
 ## Based on 200 simulations, (1 warning, 0 errors)
 ## alpha = 0.05, nrow = 54
 ## 
-## Time elapsed: 0 h 0 m 33 s
+## Time elapsed: 0 h 0 m 59 s
 ```
 
 ## Aim 3
@@ -568,8 +567,8 @@ Determine the histamine component of longer-term adaptations to exercise trainin
 
 
 ```r
-dropout <- 0.20
-effectSizes <- c(2.55, 1.54, 1.50)
+dropout <- 0.25
+effectSizes <- c(2.55, 1.54, 1.50, 1.25)
 power <- pwr.t.test(d = min(effectSizes),
                     sig.level = alpha, power = 1 - beta, 
                     type = "two.sample")
@@ -578,7 +577,7 @@ message(sprintf("Estimated sample size for Aim 4: %d in each group",
 ```
 
 ```
-## Estimated sample size for Aim 4: 13 in each group
+## Estimated sample size for Aim 4: 19 in each group
 ```
 
 ```r
@@ -597,7 +596,7 @@ The calculations are summarized below.
 |---:|:-------------------------------|:-----------------|-----------------------------:|-----------------:|:-----------------------------------------------------------------------------------|-----------:|:-----|:---------|
 |   1|One-sample matched pairs        |One-sample t-test |                          1.44|                 8|NA                                                                                  |        0.05|90%   |Two-sided |
 |   3|One-sample randomized crossover |One-sample t-test |                          0.98|                14|NA                                                                                  |        0.05|90%   |Two-sided |
-|   4|Two-sample RCT                  |Two-sample t-test |                          1.50|                26|Per protocol analysis; 50:50 ratio of study groups; sample size assumes 20% dropout |        0.05|90%   |Two-sided |
+|   4|Two-sample RCT                  |Two-sample t-test |                          1.25|                38|Per protocol analysis; 50:50 ratio of study groups; sample size assumes 25% dropout |        0.05|90%   |Two-sided |
 
 Aim 2 is more complicated.
 The study design is a full factorial design with two factors and blocking on subject.

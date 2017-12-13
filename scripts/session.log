@@ -1,8 +1,8 @@
 $completionDateTime
-[1] "2017-04-12 09:02:43 PDT"
+[1] "2017-12-13 12:46:20 PST"
 
 $executionTime
-Time difference of 2.947278 mins
+Time difference of 5.094043 mins
 
 $sessionInfo
 R version 3.3.3 (2017-03-06)
@@ -20,9 +20,9 @@ attached base packages:
 [1] methods   stats     graphics  grDevices utils     datasets  base     
 
 other attached packages:
- [1] simr_1.0.2        lme4_1.1-12       Matrix_1.2-8      pwr_1.2-1        
- [5] svglite_1.2.0     ggplot2_2.2.1     dplyr_0.5.0       magrittr_1.5     
- [9] rmarkdown_1.4     knitr_1.15.1      checkpoint_0.3.16
+ [1] simr_1.0.2       lme4_1.1-12      Matrix_1.2-8     pwr_1.2-1       
+ [5] svglite_1.2.0    ggplot2_2.2.1    dplyr_0.5.0      magrittr_1.5    
+ [9] rmarkdown_1.4    knitr_1.15.1     checkpoint_0.4.0
 
 loaded via a namespace (and not attached):
  [1] Rcpp_0.12.10       highr_0.6          nloptr_1.0.4       plyr_1.8.4        
