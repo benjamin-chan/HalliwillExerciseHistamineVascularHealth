@@ -194,8 +194,8 @@ Determine the histamine component of longer-term adaptations to exercise trainin
   * Ref: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210)
 
 ```{r}
-dropout <- 0.20
-effectSizes <- c(2.55, 1.54, 1.50)
+dropout <- 0.25
+effectSizes <- c(2.55, 1.54, 1.50, 1.25)
 power <- pwr.t.test(d = min(effectSizes),
                     sig.level = alpha, power = 1 - beta, 
                     type = "two.sample")
